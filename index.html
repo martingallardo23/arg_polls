@@ -6,10 +6,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/7.7.0/simple-statistics.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./static/css/styles.css">
+    
 </head>
+<style>
+    .navbar{
+        background-color: #F5F5F5; 
+        border-bottom:2px solid #333;
+        padding:10px;
+        align-items:center;
+        position:relative;
+        display:flex;
+    }
+    .navbar-brand {
+        font-family: 'Lilita One';
+        font-size: 30px;
+        color: #212430;
+        text-decoration: none;
+    }
+    .label {
+        margin: 0px 0px 0px 0px !important;
+    }
+</style>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PollPlot</a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- Add more <li> elements here for more pages -->
+          </ul>
+        </div>
+      </nav>
+      
     <div class="body-container">
         <div id="plot-and-labels">
             <svg width="900" height="500"></svg> 
