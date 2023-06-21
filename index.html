@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poll Plot</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/7.7.0/simple-statistics.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/styles.css">
+</head>
+<body>
+    <div class="body-container">
+        <div id="plot-and-labels">
+            <svg width="900" height="500"></svg> 
+            <div id="average-display"></div> 
+        </div>
+        <div id="tooltip" style="position: absolute; opacity: 0;"></div>
+        <div id="controls" class="checkbox-controls"></div>
+    </div>
+    <!--<button id="toggle-trend-line">Toggle Trend Line</button>-->
+    <script src="./static/js/functions.js"></script>
+    <script src="./static/js/script.js"></script>
+</body>
+</html>
