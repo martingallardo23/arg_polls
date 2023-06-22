@@ -31,7 +31,14 @@ body {
 .custom-checkbox:hover {
     background-color: #EFFBEF;
     border: 1px solid #140600;
-    box-shadow: 0px 4px #140600;
+    box-shadow: 0px 3px #140600;
+}
+
+.custom-checkbox:active {
+    /* offset y by 1px to make it look like the button is being pushed down */
+    border: 1px solid #140600;
+    box-shadow: 0px 2px #140600;
+    transform: translateY(1px);
 }
 
 .custom-checkbox input {
