@@ -18,12 +18,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        Rscript -e "install.packages('tidyverse')"
-        Rscript -e "install.packages('lubridate')"
-        Rscript -e "install.packages('janitor')"
+        Rscript -e "install.packages('dplyr')"
+        Rscript -e "install.packages('stringr')"
+        Rscript -e "install.packages('readr')"
         Rscript -e "install.packages('rvest')"
-        Rscript -e "install.packages('scales')"
-        Rscript -e "install.packages('rsconnect')"
+        Rscript -e "install.packages('janitor')"
+        Rscript -e "install.packages('lubridate')"
 
     - name: Descargar encuestas
       run: Rscript descargar_encuestas.R
