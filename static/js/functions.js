@@ -138,7 +138,6 @@ function drawPlot(data, numObservations) {
 
     var parties = d3.groups(data, d => d.party);
     smoothedDataArray = [];  
-    
 
     parties.forEach(([party, partyData]) => {
         partyData.sort((a, b) => a.fecha - b.fecha);

@@ -212,7 +212,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    box-shadow: -400px 0 0 400px #54A054;
+    box-shadow: -400px 0 0 400px #46A3AF;
     transition:  0.1s ease-in-out;
 }
 
@@ -225,5 +225,5 @@ body {
 }
 
 #obs-slider::-webkit-slider-thumb:hover {
-    box-shadow: -400px 0 0 400px #387938;
+    box-shadow: -400px 0 0 400px #3A8892;
 }
