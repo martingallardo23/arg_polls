@@ -12,70 +12,6 @@
     <link rel="stylesheet" href="./static/css/styles.css">
     
 </head>
-<style>
-    .navbar{
-        background-color: #FBFEFB; 
-        border-bottom: 1px solid #333;
-        padding: 10px 20px;
-        align-items: center;
-        position: relative;
-        display: flex;
-        justify-content: left;
-        flex: 1;
-    }
-    .navbar-brand {
-        font-family: 'Zilla Slab';
-        font-size: 30px;
-        color: #212430;
-        text-decoration: none;
-        margin-left: 20px;
-    }
-    
-    .label-indicator {
-        display: inline-block;
-    }
-
-    .circle {
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        opacity: 0.5;
- 
-    }
-    #circle1 {
-        background-color: #E4BB25;
-        margin-top:-8px;
-        transition: 0.1s ease-in-out;
-    }
-    #circle1:hover {
-        opacity: 0.7;
-        margin-top: 0px;
-    }
-
-    #circle1:active {
-        opacity: 0.8;
-        margin-top: 0px;
-    }
-
-    #circle2 {
-        background-color: #6DA861;
-        margin-left: -16px; 
-        margin-bottom:-8px;
-        transition: 0.1s ease-in-out;
-    }
-    #circle2:hover {
-        opacity: 0.7;
-        margin-bottom: 0px;
-    }
-    #circle2:active {
-        opacity: 0.8;
-        margin-top: 0px;
-    }
-    .circle-container {
-            display: flex; 
-            align-items: center; 
-        }
-</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class = "circle-container">
@@ -87,12 +23,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <!-- Add more <li> elements here for more pages -->
           </ul>
         </div>
       </nav>
       
     <div class="body-container">
+        <div id="slider-container">
+            <span style="margin: auto 10px; width: 250px;">Promedio de ultimas <span id="slider-value" style="width:20px; font-weight:700;">15</span> encuestas:</span>
+            <input type="range" id="obs-slider" min="5" max="25" value="15">
+            
+        </div>
+        
         <div id="plot-and-labels">
             <svg width="900" height="500"></svg> 
             <div id="average-display"></div> 
@@ -100,7 +41,6 @@
         <div id="tooltip" style="position: absolute; opacity: 0;"></div>
         <div id="controls" class="checkbox-controls"></div>
     </div>
-    <!--<button id="toggle-trend-line">Toggle Trend Line</button>-->
     <script src="./static/js/functions.js"></script>
     <script src="./static/js/script.js"></script>
 </body>

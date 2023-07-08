@@ -7,11 +7,18 @@ width   = +svg.attr("width") - margin.left - margin.right,
 height  = +svg.attr("height") - margin.top - margin.bottom,
 g       = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var tooltip   = d3.select("#tooltip");
-var parseTime = d3.timeParse("%Y-%m-%d");
-var x         = d3.scaleTime().rangeRound([0, width]);
-var y         = d3.scaleLinear().rangeRound([height, 0]);
-var color     = d3.scaleOrdinal(d3.schemeCategory10);
+var tooltip     = d3.select("#tooltip");
+var parseTime   = d3.timeParse("%Y-%m-%d");
+var x           = d3.scaleTime().rangeRound([0, width]);
+var y           = d3.scaleLinear().rangeRound([height, 0]);
+var color       = d3.scaleOrdinal(d3.schemeCategory10);
+var slider      = document.getElementById("obs-slider");
+var sliderValue = document.getElementById("slider-value");
+
+var line = d3.line()
+    .curve(d3.curveBasis) 
+    .x(d => x(d.fecha))
+    .y(d => y(d.percentage_points));
 
 var partyColors = {
     "Juntos por el Cambio": "#F5C000",
@@ -40,7 +47,7 @@ var movingAverage = (data, numberOfPricePoints) => {
         const mean = sum / subset.length;
 
         const sqDiff = subset.map(d => Math.pow(d.percentage_points - mean, 2));
-        const avgSqDiff = sqDiff.reduce((a, b) => a + b, 0);
+        const avgSqDiff = sqDiff.reduce((a, b) => a + b, 0)  / sqDiff.length;
         const deviation = Math.sqrt(avgSqDiff);
 
         return {
@@ -54,21 +61,6 @@ var movingAverage = (data, numberOfPricePoints) => {
 /* Define plot level events */
 
 svg.on("mouseleave", displayLatestAverages);
-
-d3.select("#toggle-trend-line").on("click", function() {
-    var trendLines = d3.selectAll(".trend-line");
-    if (trendLines.style("display") === "none") {
-        trendLines.style("display", null);
-    } else {
-        trendLines.style("display", "none");
-    }
-    var lines = d3.selectAll(".line");
-    if (lines.style("display") === "none") {
-        lines.style("display", null);
-    } else {
-        lines.style("display", "none");
-    }
-});
 
 /* Load data */
 
@@ -87,53 +79,8 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
     color.domain(data.map(d => d.party));
 
     createPartyCheckboxes(data);  
-
-    var line = d3.line()
-        .curve(d3.curveBasis) 
-        .x(d => x(d.fecha))
-        .y(d => y(d.percentage_points));
-
-    var parties = d3.groups(data, d => d.party);
-    smoothedDataArray = [];  
-
-    parties.forEach(([party, partyData]) => {
-        partyData.sort((a, b) => a.fecha - b.fecha);
-        var minDate = d3.min(partyData, d => d.fecha);
-        var maxDate = d3.max(partyData, d => d.fecha);
-
-        var smoothedPartyData = movingAverage(partyData, 15);
-
-        smoothedDataArray.push({
-            party: party,
-            data: smoothedPartyData,
-            minDate: minDate,
-            maxDate: maxDate
-        });
-
-        var confidenceArea = d3.area()
-            .curve(d3.curveBasis)
-            .x(d => x(d.fecha))
-            .y0(d => y(d.percentage_points - 1.96 * d.deviation / Math.sqrt(partyData.length)))
-            .y1(d => y(d.percentage_points + 1.96 * d.deviation / Math.sqrt(partyData.length)));
-
-        g.append("path")
-            .datum(smoothedPartyData)
-            .attr("fill", partyColors[party])
-            .attr("opacity", 0.2) 
-            .attr("d", confidenceArea)
-            .attr("class", "trend-line trend-line-" + cleanPartyName(party));
-
-        g.append("path")
-            .datum(smoothedPartyData)
-            .attr("fill", "none")
-            .attr("stroke", partyColors[party])
-            .attr("stroke-linejoin", "round")
-            .attr("stroke-linecap", "round")
-            .attr("stroke-width", 2)
-            .attr("d", line)
-            .attr("class", "line line-" + cleanPartyName(party));
-    });
-
+    drawPlot(data, 15);
+    drawDots(data);
     displayLatestAverages();
 
     g.append("g")
@@ -152,16 +99,15 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
         .attr("text-anchor", "end")
         .text("Percentage Points");
 
-    g.selectAll(".dot")
-        .data(data)
-        .enter().append("circle")
-        .attr("r", 3.5)
-        .attr("cx", d => x(d.fecha))
-        .attr("cy", d => y(d.percentage_points))
-        .style("fill", d => partyColors[d.party])
-        .on("mouseover", handleMouseOver)
-        .on("mouseout", handleMouseOut)
-        .attr("class", d => "dot dot-" + cleanPartyName(d.party));
+    slider.oninput = function() {
+        sliderValue.textContent = this.value;
+        var numObservations = this.value;
+        drawPlot(data, numObservations);
+        drawDots(data);
+        displayLatestAverages();
+    }
+    
+    slider.dispatchEvent(new Event('input'));
 
     svg.on("mousemove", handleMouseMove);
 

@@ -3,7 +3,6 @@ body {
     margin:0px !important;
 }
 
-
 .color-indicator {
     display: inline-block;
     width: 20px;
@@ -107,4 +106,124 @@ body {
 
 .label {
     margin-bottom: 0rem !important;
+}
+
+.navbar{
+    background-color: #FBFEFB; 
+    border-bottom: 1px solid #333;
+    padding: 5px 35px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    flex: 1;
+}
+.navbar-brand {
+    font-family: 'Zilla Slab';
+    font-size: 30px;
+    color: #212430;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar-toggler-icon {
+    display:none;
+}
+
+.label-indicator {
+    display: inline-block;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    opacity: 0.5;
+
+}
+#circle1 {
+    background-color: #E4BB25;
+    margin-top:-8px;
+    transition: 0.1s ease-in-out;
+}
+#circle1:hover {
+    opacity: 0.7;
+    margin-top: 0px;
+}
+
+#circle1:active {
+    opacity: 0.8;
+    margin-top: 0px;
+}
+
+#circle2 {
+    background-color: #6DA861;
+    margin-left: -16px; 
+    margin-bottom:-8px;
+    transition: 0.1s ease-in-out;
+}
+#circle2:hover {
+    opacity: 0.7;
+    margin-bottom: 0px;
+}
+#circle2:active {
+    opacity: 0.8;
+    margin-top: 0px;
+}
+.circle-container {
+    display: flex; 
+    align-items: center; 
+}
+
+#slider-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #FBFEFB;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin: 10px auto;
+}
+
+#obs-slider {
+    -webkit-appearance: none; 
+    width: 30%; 
+    height: 20px; 
+    background: #d3d3d3; 
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius:10px;
+    outline: 3px solid #d3d3d3;
+    overflow: hidden;
+}
+
+#obs-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; 
+    height: 30px; 
+    background-image: url(https://emojiguide.com/wp-content/uploads/platform/google/43730.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: -400px 0 0 400px #54A054;
+    transition:  0.1s ease-in-out;
+}
+
+#obs-slider::-moz-range-thumb {
+    width: 20px; 
+    height: 20px; 
+    background: #ffffff;
+    border: 2px solid black; 
+    cursor: pointer; 
+}
+
+#obs-slider::-webkit-slider-thumb:hover {
+    box-shadow: -400px 0 0 400px #387938;
 }
