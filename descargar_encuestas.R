@@ -1,5 +1,5 @@
 lapply(c("tidyverse", "rvest", "janitor", "scales", "lubridate", 
-         "shiny", "rsconnect", "ggiraph"), require, character.only=TRUE)
+         "rsconnect"), require, character.only=TRUE)
 
 main <- function() {         
 
