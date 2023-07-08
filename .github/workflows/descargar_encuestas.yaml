@@ -1,7 +1,7 @@
 name: Run R script and commit
 
 on:
-  commit:
+  push:
     branches:
       - master
 
