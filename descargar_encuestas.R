@@ -85,7 +85,7 @@ main <- function() {
     filter(percentage_points>0)
 
   write_csv(encuestas_long |> 
-              filter(!is.na(percentage_points)), "C:/Users/Usuario/Documents/GitHub/PollPlot/PollPlot/data/encuestas_long.csv")
+              filter(!is.na(percentage_points)), "data/encuestas_long.csv")
 }
 
 main()
