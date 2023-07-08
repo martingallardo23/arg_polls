@@ -17,9 +17,7 @@ jobs:
       uses: r-lib/actions/setup-r@master
 
     - name: Descargar encuestas
-      run: |
-        source("descargar_encuestas.R")
-      shell: Rscript {0}
+      run: Rscript descargar_encuestas.R
 
     - name: Commit and push if it changed
       run: |
