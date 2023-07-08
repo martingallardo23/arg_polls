@@ -1,9 +1,9 @@
 name: Run R script and commit
 
 on:
-  schedule:
-    # Run this workflow every day at midnight
-    - cron:  '10 21 * * *'
+  commit:
+    branches:
+      - master
 
 jobs:
   build:
