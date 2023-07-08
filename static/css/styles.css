@@ -104,3 +104,7 @@ body {
 .average-display-item {
     padding: 0px 5px;    
 }
+
+.label {
+    margin-bottom: 0rem !important;
+}

@@ -61,7 +61,7 @@ function createPartyCheckboxes(data) {
 
                 togglePartyVisibility(party, input.checked); 
 
-                d3.select(this).selectAll(".color-indicator, label")
+                d3.select(this).selectAll(".color-indicator, label-indicator")
                     .transition()
                     .duration(200)
                     .style("opacity", input.checked ? 1 : 0.4);
@@ -77,7 +77,7 @@ function createPartyCheckboxes(data) {
             .property("checked", true)
             .style("display", "none");
 
-        div.append("label")
+        div.append("label-indicator")
             .attr("for", "chk-" + party)
             .text(party);
     });
@@ -95,32 +95,30 @@ function hexToRGBA(hex, alpha) {
     }
 }
 
-
-function displayAverages(yearMonth) {
+function displayAverages(date) {
     var averageDisplay = d3.select("#average-display");
     averageDisplay.html("");
 
-    var parties = d3.rollup(data, v => d3.mean(v, d => d.percentage_points), d => d.party, d => d3.timeMonth(d.fecha));
     var partyDataArray = [];
-    parties.forEach((values, party) => {
-        var partyData = Array.from(values, ([date, value]) => ({date: new Date(date), value: value}));
-        partyData.sort((a, b) => a.date - b.date);
 
-        var bisectDate = d3.bisector(function(d) { return d.date; }).left;
-        var i = bisectDate(partyData, yearMonth, 1);
-        var d0 = partyData[i - 1];
-        var d1 = partyData[i];
+    smoothedDataArray.forEach(({party, data}) => {
+        var bisectDate = d3.bisector(function(d) { return d.fecha; }).left;
+        var i = bisectDate(data, date, 1);
+        var d0 = data[i - 1];
+        var d1 = data[i];
         var d;
 
         if (d0 && d1) {
-            d = yearMonth - d0.date > d1.date - yearMonth ? d1 : d0;
+            d = date - d0.fecha > d1.fecha - date ? d1 : d0;
         } else if (d0) {
             d = d0;
         } else if (d1) {
             d = d1;
         }
 
-        partyDataArray.push({party: party, value: d.value});
+        if (d) {
+            partyDataArray.push({party: party, value: d.percentage_points});
+        }
     });
 
     partyDataArray.sort((a, b) => b.value - a.value);
@@ -145,6 +143,13 @@ function displayAverages(yearMonth) {
     });
 }
 
+function displayLatestAverages() {
+    var latestDate = d3.max(data, function(d) { return d.fecha; });
+    var yearMonth = d3.timeMonth(latestDate);
+
+    displayAverages(latestDate);
+}
+
 function handleMouseMove(event, d) {
     var svgBounds = svg.node().getBoundingClientRect();
     var mouseX = event.clientX - svgBounds.left - margin.left;
@@ -155,12 +160,5 @@ function handleMouseMove(event, d) {
         .attr("x2", mouseX)
         .style("opacity", 1);
 
-    displayAverages(yearMonth);
-}
-
-function displayLatestAverages() {
-    var latestDate = d3.max(data, function(d) { return d.fecha; });
-    var yearMonth = d3.timeMonth(latestDate);
-
-    displayAverages(yearMonth);
+    displayAverages(date);
 }
