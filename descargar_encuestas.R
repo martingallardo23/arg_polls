@@ -1,4 +1,4 @@
-lapply(c("dplyr", "stringr", "rvest", "readr", "lubridate"), require, character.only=TRUE)
+lapply(c("tidyr", "dplyr", "stringr", "rvest", "readr", "lubridate"), require, character.only=TRUE)
 
 main <- function() {         
 
