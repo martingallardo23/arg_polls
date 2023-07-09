@@ -223,9 +223,9 @@ function handleMouseOver(event, d) {
         .style("opacity", 1);
 
     tooltip.html("<span style='color:" + partyColors[d.party] + 
-        "; font-weight:bold;'> " + d.party +"</span>"
-        + "<br/><b>Porcentaje:</b> " + d.percentage_points + "%"
-        + "</br><b>Encuesta:</b> " + d.encuestadora + "</b>")
+            "; font-weight:bold;'> " + d.party +"</span>"
+            + "<br/><b>Porcentaje:</b> " + d.percentage_points + "%"
+            + "</br><b>Encuesta:</b> " + d.encuestadora + "</b>")
         .style("left", (event.pageX + 20) + "px")     
         .style("top", (event.pageY - 10) + "px");   
 }
@@ -244,7 +244,6 @@ function handleMouseMove(event, d) {
     var svgBounds = svg.node().getBoundingClientRect();
     var mouseX = event.clientX - svgBounds.left - margin.left;
     var date = x.invert(mouseX);
-    var yearMonth = d3.timeMonth(date);
 
     verticalLine.attr("x1", mouseX)
         .attr("x2", mouseX)

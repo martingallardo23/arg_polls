@@ -61,22 +61,6 @@ var movingAverage = (data, numberOfPricePoints) => {
     });
 };
 
-g.append("g")
-.attr("transform", "translate(0," + height + ")")
-.call(d3.axisBottom(x))
-.select(".domain")
-.remove();
-
-g.append("g")
-.call(d3.axisLeft(y))
-.append("text")
-.attr("fill", "#000")
-.attr("transform", "rotate(-90)")
-.attr("y", 6)
-.attr("dy", "0.71em")
-.attr("text-anchor", "end")
-.text("Percentage Points");
-
 /* Define plot level events */
 
 svg.on("mouseleave", displayLatestAverages);
@@ -97,11 +81,26 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
     y.domain(d3.extent(data, d => d.percentage_points));
     color.domain(data.map(d => d.party));
 
+    g.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+        .select(".domain")
+        .remove();
+
+    g.append("g")
+        .call(d3.axisLeft(y))
+        .append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .text("Percentage Points");
+
     createPartyCheckboxes(data);  
     drawPlot(data, 15);
     drawDots(data);
     displayLatestAverages();
-
 
     slider.oninput = function() {
         sliderValue.textContent = this.value;
