@@ -55,19 +55,15 @@ function togglePartyVisibility(party, checked) {
         .transition()
         .duration(200)
         .style("opacity", checked ? 0.2 : 0);
-    d3.selectAll(".average-display-item-" + cleanParty)
-        .transition()
-        .duration(200)
-        .style("display", checked ? 'block' : 'none');
-    
+
     displayAverages();
 }
 
 function createPartyCheckboxes(data) {
 
-    color.domain(data.map(function(d) { return d.party; }));
+    color.domain(data.map(d => d.party ));
 
-    color.domain().forEach(function(party) {
+    color.domain().forEach(party => {
         var div = controls.append("div")
             .attr("class", "custom-checkbox")
             .on("click", function() {
@@ -153,7 +149,7 @@ function displayAverages(date) {
 }
 
 function displayLatestAverages() {
-    var latestDate = d3.max(data, function(d) { return d.fecha; });
+    var latestDate = d3.max(data, d => d.fecha );
     displayAverages(latestDate);
     displayDate(latestDate)
 }
