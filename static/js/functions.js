@@ -32,9 +32,21 @@ function getVisibleParties() {
 function togglePartyVisibility(party, checked) {
     var cleanParty = cleanPartyName(party);
     d3.selectAll(".dot-" + cleanParty)
+        .each(function() {
+            if (checked) {
+                d3.select(this)
+                    .style("display", 'block');
+            }
+        })
         .transition()
         .duration(200)
-        .style("opacity", checked ? 0.5 : 0);
+        .style("opacity", checked ? 0.5 : 0)
+        .on("end", function() {
+            if (!checked) {
+                d3.select(this)
+                    .style("display", 'none');
+            }
+        });
     d3.selectAll(".line-" + cleanParty)
         .transition()
         .duration(200)
