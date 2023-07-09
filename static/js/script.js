@@ -5,7 +5,10 @@ var svg = d3.select("svg"),
 margin  = {top: 20, right: 20, bottom: 30, left: 50},
 width   = +svg.attr("width") - margin.left - margin.right,
 height  = +svg.attr("height") - margin.top - margin.bottom,
-g       = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+g       = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+gTrendLines = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+gDots   = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+gLines  = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var tooltip     = d3.select("#tooltip");
 var parseTime   = d3.timeParse("%Y-%m-%d");
@@ -58,6 +61,22 @@ var movingAverage = (data, numberOfPricePoints) => {
     });
 };
 
+g.append("g")
+.attr("transform", "translate(0," + height + ")")
+.call(d3.axisBottom(x))
+.select(".domain")
+.remove();
+
+g.append("g")
+.call(d3.axisLeft(y))
+.append("text")
+.attr("fill", "#000")
+.attr("transform", "rotate(-90)")
+.attr("y", 6)
+.attr("dy", "0.71em")
+.attr("text-anchor", "end")
+.text("Percentage Points");
+
 /* Define plot level events */
 
 svg.on("mouseleave", displayLatestAverages);
@@ -83,27 +102,11 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
     drawDots(data);
     displayLatestAverages();
 
-    g.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x))
-        .select(".domain")
-        .remove();
-
-    g.append("g")
-        .call(d3.axisLeft(y))
-        .append("text")
-        .attr("fill", "#000")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", "0.71em")
-        .attr("text-anchor", "end")
-        .text("Percentage Points");
 
     slider.oninput = function() {
         sliderValue.textContent = this.value;
         var numObservations = this.value;
         drawPlot(data, numObservations);
-        drawDots(data);
         displayLatestAverages();
     }
     

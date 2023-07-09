@@ -159,14 +159,14 @@ function drawPlot(data, numObservations) {
             .y0(d => y(d.percentage_points - d.deviation ))
             .y1(d => y(d.percentage_points + d.deviation));
 
-        g.append("path")
+        gTrendLines.append("path")
             .datum(smoothedPartyData)
             .attr("fill", partyColors[party])
             .attr("opacity", visibleParties.includes(party) ? 0.2 : 0)
             .attr("d", confidenceArea)
             .attr("class", "trend-line trend-line-" + cleanPartyName(party));
 
-        g.append("path")
+        gLines.append("path")
             .datum(smoothedPartyData)
             .attr("fill", "none")
             .attr("stroke", partyColors[party])
@@ -182,7 +182,7 @@ function drawPlot(data, numObservations) {
 function drawDots(data) {
     svg.selectAll(".dot").remove();
 
-    g.selectAll(".dot")
+    gDots.selectAll(".dot")
         .data(data)
         .enter().append("circle")
         .attr("r", 3.5)

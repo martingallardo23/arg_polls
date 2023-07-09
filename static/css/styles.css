@@ -20,7 +20,7 @@ body {
     font-size: 16px;
     user-select: none;
     width: fit-content;
-    background-color: #FBFEFB;
+    background-color: #EFFBEF;
     border:1px solid #0D3B66;
     margin: 4px;
     transition:  0.1s ease-in-out;
@@ -28,7 +28,7 @@ body {
 }
 
 .custom-checkbox:hover {
-    background-color: #EFFBEF;
+    background-color: #DEF7DE;
     border: 1px solid #140600;
     box-shadow: 0px 3px #140600;
 }
@@ -95,7 +95,7 @@ body {
 }
 
 .body-container {
-    width: 100%;
+    width: 85%;
     margin:20px auto;
     max-width: 1100px;
 }
@@ -181,7 +181,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    background-color: #FBFEFB;
+    background-color: #EFFBEF;
     padding: 10px 20px;
     border: 1px solid #333;
     border-radius: 3px;
@@ -192,22 +192,23 @@ body {
     -webkit-appearance: none; 
     width: 30%; 
     height: 20px; 
-    background: #d3d3d3; 
+    background: #D7EAD7; 
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-    border-radius:10px;
-    outline: 3px solid #d3d3d3;
+    border-radius:2px;
+    outline: 1px solid #2b2b2b;
     overflow: hidden;
 }
 
 #obs-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 30px; 
-    height: 30px; 
+    width: 25px; 
+    height: 25px; 
     background-image: url(https://emojiguide.com/wp-content/uploads/platform/google/43730.png);
+    
     background-size: 30px 30px;
     background-repeat: no-repeat;
     background-position: center;
