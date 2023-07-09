@@ -82,16 +82,21 @@ body {
     justify-content: center; 
 }
 
+#average-display {
+    text-align:left;
+    width:160px;
+    margin:auto 5px;
+}
+
 #plot-and-labels {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
     align-items: center;
-
     background-color: #FBFEFB;
     border: 1px solid #0D3B66;
     border-radius:3px;
-    margin-bottom:5px;
-    padding:0px;
+    margin: 5px auto;
+    padding: 5px 15px;
 }
 
 .body-container {
@@ -101,7 +106,7 @@ body {
 }
 
 .average-display-item {
-    padding: 0px 5px;    
+    padding: 0px 5px;   
 }
 
 .label {

@@ -95,7 +95,7 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
         .attr("y", 6)
         .attr("dy", "0.71em")
         .attr("text-anchor", "end")
-        .text("Percentage Points");
+        .text("Puntos porcentuales");
 
     createPartyCheckboxes(data);  
     drawPlot(data, 15);
