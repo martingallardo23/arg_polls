@@ -64,8 +64,7 @@ function togglePartyVisibility(party, checked) {
 }
 
 function createPartyCheckboxes(data) {
-    var controls = d3.select("#controls");
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+
     color.domain(data.map(function(d) { return d.party; }));
 
     color.domain().forEach(function(party) {
@@ -103,12 +102,12 @@ function createPartyCheckboxes(data) {
 /* Plotting and displaying averages functions*/
 
 function displayAverages(date) {
-    var averageDisplay = d3.select("#average-display");
+
     averageDisplay.html("");
 
     var partyDataArray = [];
 
-    visibleParties = getVisibleParties();
+    var visibleParties = getVisibleParties();
 
     smoothedDataArray.forEach(({party, data}) => {
         var bisectDate = d3.bisector(d => d.fecha).left;
@@ -159,11 +158,16 @@ function displayLatestAverages() {
     displayDate(latestDate)
 }
 
+
+function displayDate(date) {
+    dateDisplayElem.text(date.toLocaleDateString("es-ES", dateOptions));
+}	
+
 function drawPlot(data, numObservations) {
     svg.selectAll(".trend-line").remove();
     svg.selectAll(".line").remove();
 
-    visibleParties = getVisibleParties();
+    var visibleParties = getVisibleParties();
 
     var parties = d3.groups(data, d => d.party);
     smoothedDataArray = [];  
@@ -254,7 +258,6 @@ function handleMouseOut(event, d) {
 }
 
 function handleMouseMove(event, d) {
-    var svgBounds = svg.node().getBoundingClientRect();
     var mouseX = event.clientX - svgBounds.left - margin.left;
     var date = x.invert(mouseX);
 
@@ -265,16 +268,3 @@ function handleMouseMove(event, d) {
     displayAverages(date);
     displayDate(date);
 }
-
-function displayDate(date) {
-    // get element of document with id display-date
-    var displayDate = d3.select("#date-display");
-
-    var options = { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
-    };
-
-    displayDate.text(date.toLocaleDateString("es-ES", options));
-}	
