@@ -32,6 +32,10 @@ function togglePartyVisibility(party, checked) {
         .transition()
         .duration(200)
         .style("opacity", checked ? 0.2 : 0);
+    d3.selectAll(".average-display-item-" + cleanParty)
+        .transition()
+        .duration(200)
+        .style("opacity", checked ? 1 : 0);
 }
 
 function createPartyCheckboxes(data) {
@@ -80,7 +84,7 @@ function displayAverages(date) {
     var partyDataArray = [];
 
     smoothedDataArray.forEach(({party, data}) => {
-        var bisectDate = d3.bisector(function(d) { return d.fecha; }).left;
+        var bisectDate = d3.bisector(d => d.fecha).left;
         var i = bisectDate(data, date, 1);
         var d0 = data[i - 1];
         var d1 = data[i];
@@ -105,18 +109,19 @@ function displayAverages(date) {
     partyDataArray.forEach(partyData => {
         var normalizedValue = (partyData.value / totalSum) * 100;
 
-    var item = averageDisplay.append("div")
-        .attr("class", "average-display-item")
-        .style("color", hexToRGBA(partyColors[partyData.party], 1))
+        var item = averageDisplay.append("div")
+            .attr("class", "average-display-item")
+            .attr("class", "average-display-item-" + cleanPartyName(partyData.party))
+            .style("color", hexToRGBA(partyColors[partyData.party], 1));
 
-    item.append("p")
-        .style("font-weight", "bold")
-        .style("margin-bottom", "0")
-        .text(partyData.party + ":");
+        item.append("p")
+            .style("font-weight", "bold")
+            .style("margin-bottom", "0")
+            .text(partyData.party + ":");
 
-    item.append("p")
-        .style("margin-top", "0")
-        .text(normalizedValue.toFixed(2) + "%");
+        item.append("p")
+            .style("margin-top", "0")
+            .text(normalizedValue.toFixed(2) + "%");
     });
 }
 
@@ -125,7 +130,7 @@ function displayLatestAverages() {
     displayAverages(latestDate);
 }
 
-function drawPlot(data, numObservations) {
+function drawPlot(data, numObservations, bandwith = 0.5) {
     svg.selectAll(".trend-line").remove();
     svg.selectAll(".line").remove();
 
@@ -159,20 +164,15 @@ function drawPlot(data, numObservations) {
             .y0(d => y(d.percentage_points - d.deviation ))
             .y1(d => y(d.percentage_points + d.deviation));
 
-        gTrendLines.append("path")
-            .datum(smoothedPartyData)
-            .attr("fill", partyColors[party])
-            .attr("opacity", visibleParties.includes(party) ? 0.2 : 0)
-            .attr("d", confidenceArea)
-            .attr("class", "trend-line trend-line-" + cleanPartyName(party));
+
 
         gLines.append("path")
-            .datum(smoothedPartyData)
+            .datum(regressionGenerator(bandwith)(partyData))
             .attr("fill", "none")
             .attr("stroke", partyColors[party])
             .attr("stroke-linejoin", "round")
             .attr("stroke-linecap", "round")
-            .attr("stroke-width", 2)
+            .attr("stroke-width", 5)
             .attr("opacity", visibleParties.includes(party) ? 1 : 0)
             .attr("d", line)
             .attr("class", "line line-" + cleanPartyName(party));

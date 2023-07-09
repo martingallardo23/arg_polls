@@ -20,8 +20,8 @@ var sliderValue = document.getElementById("slider-value");
 
 var line = d3.line()
     .curve(d3.curveBasis) 
-    .x(d => x(d.fecha))
-    .y(d => y(d.percentage_points));
+    .x(d => d[0])
+    .y(d => d[1]);
 
 var partyColors = {
     "Juntos por el Cambio": "#F5C000",
@@ -86,6 +86,11 @@ svg.on("mouseleave", displayLatestAverages);
 var data;
 let smoothedDataArray; 
 
+var regressionGenerator = (bandwith) => d3.regressionLoess()
+  .x(d => x(d.fecha))
+  .y(d => y(d.percentage_points))
+  .bandwidth(bandwith);
+
 d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
     data = loadedData.map(function(d) {
         d.fecha = parseTime(d.fecha);
@@ -102,11 +107,11 @@ d3.csv("./data/encuestas_long.csv").then(function(loadedData) {
     drawDots(data);
     displayLatestAverages();
 
-
     slider.oninput = function() {
         sliderValue.textContent = this.value;
         var numObservations = this.value;
-        drawPlot(data, numObservations);
+        var bandwith = this.value;
+        drawPlot(data, 15, bandwith);
         displayLatestAverages();
     }
     
