@@ -91,12 +91,13 @@ body {
 #plot-and-labels {
     display: flex;
     justify-content: space-between; 
-    align-items: center;
+    align-items: flex-start;
     background-color: #FBFEFB;
     border: 1px solid #0D3B66;
     border-radius:3px;
     margin: 5px auto;
     padding: 5px 15px;
+    height: 520px; 
 }
 
 .body-container {
@@ -210,15 +211,17 @@ body {
 #obs-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px; 
-    height: 25px; 
-    background-image: url(https://emojiguide.com/wp-content/uploads/platform/google/43730.png);
-    
+    width: 20px; 
+    height: 20px; 
+    /*background-image: url(https://emojiguide.com/wp-content/uploads/platform/google/43730.png);
     background-size: 30px 30px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
+    background-color: #FBFEFB;
+    border-radius:10px;
+    border:1px solid #333;
     cursor: pointer;
-    box-shadow: -400px 0 0 400px #46A3AF;
+    box-shadow: -407px 0 0 400px #46A3AF;
     transition:  0.1s ease-in-out;
 }
 
@@ -231,5 +234,33 @@ body {
 }
 
 #obs-slider::-webkit-slider-thumb:hover {
-    box-shadow: -400px 0 0 400px #3A8892;
+
+    border-radius:3px;
+}
+#obs-slider::-webkit-slider-thumb:active {
+    box-shadow: -407px 0 0 400px #3A8892;
+}
+
+.date-and-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; /* Push children to the top and bottom */
+    height: 100%; 
+}
+#average-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;  /* take full height of parent */
+}
+
+#date-display {
+    text-align: center;
+    border:1px solid #333;
+    border-radius:5px;
+    width: 100%;
+    padding: 10px;
+    margin-top:10px;
+    background-color: #EFFBEF;
 }

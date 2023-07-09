@@ -156,6 +156,7 @@ function displayAverages(date) {
 function displayLatestAverages() {
     var latestDate = d3.max(data, function(d) { return d.fecha; });
     displayAverages(latestDate);
+    displayDate(latestDate)
 }
 
 function drawPlot(data, numObservations) {
@@ -262,4 +263,18 @@ function handleMouseMove(event, d) {
         .style("opacity", 1);
 
     displayAverages(date);
+    displayDate(date);
 }
+
+function displayDate(date) {
+    // get element of document with id display-date
+    var displayDate = d3.select("#date-display");
+
+    var options = { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+    };
+
+    displayDate.text(date.toLocaleDateString("es-ES", options));
+}	

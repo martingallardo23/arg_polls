@@ -13,7 +13,6 @@ main <- function() {
     return(month_map[tolower(spanish_month)])
   }
 
-
   extract_and_parse_date <- function(date_text) {
     if (str_detect(date_text, "-")) {
       date_text <- str_split(date_text, "-", simplify = TRUE)[, 2]
