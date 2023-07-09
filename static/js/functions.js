@@ -16,6 +16,17 @@ function hexToRGBA(hex, alpha) {
     }
 }
 
+function getVisibleParties() {
+    var visibleParties = [];
+    d3.selectAll('#controls input[type=checkbox]').each(function() {
+        if (d3.select(this).property('checked')) {
+            visibleParties.push(d3.select(this).attr('id').substring(4));
+        }
+    });
+
+    return visibleParties;
+}
+
 /* Input control functions */
 
 function togglePartyVisibility(party, checked) {
@@ -32,6 +43,12 @@ function togglePartyVisibility(party, checked) {
         .transition()
         .duration(200)
         .style("opacity", checked ? 0.2 : 0);
+    d3.selectAll(".average-display-item-" + cleanParty)
+        .transition()
+        .duration(200)
+        .style("display", checked ? 'block' : 'none');
+    
+    displayAverages();
 }
 
 function createPartyCheckboxes(data) {
@@ -79,8 +96,10 @@ function displayAverages(date) {
 
     var partyDataArray = [];
 
+    visibleParties = getVisibleParties();
+
     smoothedDataArray.forEach(({party, data}) => {
-        var bisectDate = d3.bisector(function(d) { return d.fecha; }).left;
+        var bisectDate = d3.bisector(d => d.fecha).left;
         var i = bisectDate(data, date, 1);
         var d0 = data[i - 1];
         var d1 = data[i];
@@ -107,6 +126,8 @@ function displayAverages(date) {
 
     var item = averageDisplay.append("div")
         .attr("class", "average-display-item")
+        .attr("class", "average-display-item-" + cleanPartyName(partyData.party))
+        .style("display", visibleParties.includes(partyData.party) ? 'block' : 'none')
         .style("color", hexToRGBA(partyColors[partyData.party], 1))
 
     item.append("p")
@@ -129,12 +150,7 @@ function drawPlot(data, numObservations) {
     svg.selectAll(".trend-line").remove();
     svg.selectAll(".line").remove();
 
-    var visibleParties = [];
-    d3.selectAll('#controls input[type=checkbox]').each(function() {
-        if (d3.select(this).property('checked')) {
-            visibleParties.push(d3.select(this).attr('id').substring(4));
-        }
-    });
+    visibleParties = getVisibleParties();
 
     var parties = d3.groups(data, d => d.party);
     smoothedDataArray = [];  
