@@ -34,7 +34,6 @@ body {
 }
 
 .custom-checkbox:active {
-    /* offset y by 1px to make it look like the button is being pushed down */
     border: 1px solid #140600;
     box-shadow: 0px 2px #140600;
     transform: translateY(1px);
@@ -76,6 +75,7 @@ body {
     border: 1px solid #000;
     pointer-events: none;
 }
+
 .checkbox-controls {
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +124,7 @@ body {
     justify-content: left;
     flex: 1;
 }
+
 .navbar-brand {
     font-family: 'Zilla Slab';
     font-size: 30px;
@@ -147,11 +148,13 @@ body {
     opacity: 0.5;
 
 }
+
 #circle1 {
     background-color: #E4BB25;
     margin-top:-8px;
     transition: 0.1s ease-in-out;
 }
+
 #circle1:hover {
     opacity: 0.7;
     margin-top: 0px;
@@ -168,14 +171,17 @@ body {
     margin-bottom:-8px;
     transition: 0.1s ease-in-out;
 }
+
 #circle2:hover {
     opacity: 0.7;
     margin-bottom: 0px;
 }
+
 #circle2:active {
     opacity: 0.8;
     margin-top: 0px;
 }
+
 .circle-container {
     display: flex; 
     align-items: center; 
@@ -196,6 +202,7 @@ body {
 
 #obs-slider {
     -webkit-appearance: none; 
+    appearance: none;
     width: 30%; 
     height: 20px; 
     background: #D7EAD7; 
@@ -208,15 +215,11 @@ body {
     overflow: hidden;
 }
 
-#obs-slider::-webkit-slider-thumb {
+#obs-slider::-webkit-slider-thumb, #obs-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px; 
     height: 20px; 
-    /*background-image: url(https://emojiguide.com/wp-content/uploads/platform/google/43730.png);
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    background-position: center;*/
     background-color: #FBFEFB;
     border-radius:10px;
     border:1px solid #333;
@@ -225,19 +228,19 @@ body {
     transition:  0.1s ease-in-out;
 }
 
-#obs-slider::-moz-range-thumb {
-    width: 20px; 
-    height: 20px; 
-    background: #ffffff;
-    border: 2px solid black; 
-    cursor: pointer; 
-}
-
 #obs-slider::-webkit-slider-thumb:hover {
-
     border-radius:3px;
 }
+
 #obs-slider::-webkit-slider-thumb:active {
+    box-shadow: -407px 0 0 400px #3A8892;
+}
+
+#obs-slider::-moz-range-thumb:hover {
+    border-radius:3px;
+}
+
+#obs-slider::-moz-range-thumb:active {
     box-shadow: -407px 0 0 400px #3A8892;
 }
 
@@ -245,14 +248,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start; /* Push children to the top and bottom */
+    align-items: flex-start; 
     height: 100%; 
 }
+
 #average-display {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;  /* take full height of parent */
+    height: 100%; 
 }
 
 #date-display {
