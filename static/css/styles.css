@@ -215,7 +215,20 @@ body {
     overflow: hidden;
 }
 
-#obs-slider::-webkit-slider-thumb, #obs-slider::-moz-range-thumb {
+#obs-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    background-color: #FBFEFB;
+    border-radius:10px;
+    border:1px solid #333;
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px #46A3AF;
+    transition:  0.1s ease-in-out;
+}
+
+#obs-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px; 
