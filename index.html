@@ -29,13 +29,8 @@
       </nav>
       
     <div class="body-container">
-        <div id="slider-container">
-            <span style="margin: auto 10px; width: 260px;">Promedio movil de <span id="slider-value" style="width:20px; font-weight:700;">15</span> encuestas:</span>
-            <input type="range" id="obs-slider" min="5" max="25" value="15">
-            
-        </div>
-        
-        <div id="plot-and-labels">
+      
+      <div id="plot-and-labels">
           <svg width="850" height="500"></svg> 
           <div class="date-and-labels">
             <div id="date-display"></div>
@@ -43,6 +38,11 @@
           </div>
         </div>
         <div id="tooltip" style="position: absolute; opacity: 0;"></div>
+        <div id="slider-container">
+            <span style="margin: auto 10px; width: 260px;">Promedio movil de <span id="slider-value" style="width:20px; font-weight:700;">15</span> encuestas:</span>
+            <input type="range" id="obs-slider" min="5" max="25" value="15">
+            
+        </div>
         <div id="controls" class="checkbox-controls"></div>
     </div>
     <script src="./static/js/functions.js"></script>
