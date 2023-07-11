@@ -182,12 +182,6 @@ function drawPlot(data, numObservations) {
             maxDate: maxDate
         });
 
-        var confidenceArea = d3.area()
-            .curve(d3.curveBasis)
-            .x(d => x(d.fecha))
-            .y0(d => y(d.percentage_points - d.deviation ))
-            .y1(d => y(d.percentage_points + d.deviation));
-
         gTrendLines.append("path")
             .datum(smoothedPartyData)
             .attr("fill", partyColors[party])

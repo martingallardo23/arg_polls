@@ -14,7 +14,6 @@ var tooltip     = d3.select("#tooltip");
 var parseTime   = d3.timeParse("%Y-%m-%d");
 var x           = d3.scaleTime().rangeRound([0, width]);
 var y           = d3.scaleLinear().rangeRound([height, 0]);
-var color       = d3.scaleOrdinal(d3.schemeCategory10);
 var slider      = document.getElementById("obs-slider");
 var sliderValue = document.getElementById("slider-value");
 var dateDisplayElem = d3.select("#date-display");
@@ -33,6 +32,13 @@ var line = d3.line()
     .curve(d3.curveBasis) 
     .x(d => x(d.fecha))
     .y(d => y(d.percentage_points));
+
+    
+var confidenceArea = d3.area()
+    .curve(d3.curveBasis)
+    .x(d => x(d.fecha))
+    .y0(d => y(d.percentage_points - d.deviation ))
+    .y1(d => y(d.percentage_points + d.deviation));
 
 var partyColors = {
         "Juntos por el Cambio": "#F5C000",
