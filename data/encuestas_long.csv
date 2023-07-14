@@ -33,11 +33,11 @@ fecha,encuestadora,muestra,party,percentage_points
 2022-03-08,Opina Argentina,1000,La Libertad Avanza,20.9
 2022-03-08,Opina Argentina,1000,Frente de Izquierda,4.7
 2022-03-08,Opina Argentina,1000,Otros,9.3
-2022-03-14,Zuban Córdoba,1300,Juntos por el Cambio,40.6
-2022-03-14,Zuban Córdoba,1300,Frente de Todos,31.5
-2022-03-14,Zuban Córdoba,1300,La Libertad Avanza,20.3
-2022-03-14,Zuban Córdoba,1300,Frente de Izquierda,1.2
-2022-03-14,Zuban Córdoba,1300,Otros,6.4
+2022-03-14,Zuban Córdoba & Asociados,1300,Juntos por el Cambio,40.6
+2022-03-14,Zuban Córdoba & Asociados,1300,Frente de Todos,31.5
+2022-03-14,Zuban Córdoba & Asociados,1300,La Libertad Avanza,20.3
+2022-03-14,Zuban Córdoba & Asociados,1300,Frente de Izquierda,1.2
+2022-03-14,Zuban Córdoba & Asociados,1300,Otros,6.4
 2022-03-22,Opinaia,2400,Juntos por el Cambio,34.5
 2022-03-22,Opinaia,2400,Frente de Todos,35.6
 2022-03-22,Opinaia,2400,La Libertad Avanza,23
@@ -124,11 +124,11 @@ fecha,encuestadora,muestra,party,percentage_points
 2022-06-01,PGD Consultores,2500,Frente de Todos,33.3
 2022-06-01,PGD Consultores,2500,La Libertad Avanza,22.6
 2022-06-01,PGD Consultores,2500,Frente de Izquierda,4.8
-2022-06-10,CIGP Consultora,1800,Juntos por el Cambio,41.4
-2022-06-10,CIGP Consultora,1800,Frente de Todos,27.5
-2022-06-10,CIGP Consultora,1800,La Libertad Avanza,19.9
-2022-06-10,CIGP Consultora,1800,Frente de Izquierda,4.2
-2022-06-10,CIGP Consultora,1800,Otros,7
+2022-06-10,CIGP,1800,Juntos por el Cambio,41.4
+2022-06-10,CIGP,1800,Frente de Todos,27.5
+2022-06-10,CIGP,1800,La Libertad Avanza,19.9
+2022-06-10,CIGP,1800,Frente de Izquierda,4.2
+2022-06-10,CIGP,1800,Otros,7
 2022-06-12,Raúl Aragón & Asociados,NA,Juntos por el Cambio,46.3
 2022-06-12,Raúl Aragón & Asociados,NA,Frente de Todos,32.8
 2022-06-12,Raúl Aragón & Asociados,NA,La Libertad Avanza,13.7
@@ -186,11 +186,11 @@ fecha,encuestadora,muestra,party,percentage_points
 2022-07-18,Solmoirago,1800,Frente de Todos,30.9
 2022-07-18,Solmoirago,1800,La Libertad Avanza,18.6
 2022-07-18,Solmoirago,1800,Frente de Izquierda,1.7
-2022-07-22,CIGP Consultora,1860,Juntos por el Cambio,36.5
-2022-07-22,CIGP Consultora,1860,Frente de Todos,26.2
-2022-07-22,CIGP Consultora,1860,La Libertad Avanza,16.9
-2022-07-22,CIGP Consultora,1860,Frente de Izquierda,3.7
-2022-07-22,CIGP Consultora,1860,Otros,16.7
+2022-07-22,CIGP,1860,Juntos por el Cambio,36.5
+2022-07-22,CIGP,1860,Frente de Todos,26.2
+2022-07-22,CIGP,1860,La Libertad Avanza,16.9
+2022-07-22,CIGP,1860,Frente de Izquierda,3.7
+2022-07-22,CIGP,1860,Otros,16.7
 2022-07-26,Opinaia,2400,Juntos por el Cambio,35.7
 2022-07-26,Opinaia,2400,Frente de Todos,32.1
 2022-07-26,Opinaia,2400,La Libertad Avanza,21.4
@@ -308,10 +308,10 @@ fecha,encuestadora,muestra,party,percentage_points
 2022-10-19,Solmoirago,1800,La Libertad Avanza,20.6
 2022-10-19,Solmoirago,1800,Frente de Izquierda,2.9
 2022-10-19,Solmoirago,1800,Otros,5.3
-2022-10-21,CIGP Consultora,2400,Juntos por el Cambio,38.7
-2022-10-21,CIGP Consultora,2400,Frente de Todos,30.2
-2022-10-21,CIGP Consultora,2400,La Libertad Avanza,19.6
-2022-10-21,CIGP Consultora,2400,Otros,11.5
+2022-10-21,CIGP,2400,Juntos por el Cambio,38.7
+2022-10-21,CIGP,2400,Frente de Todos,30.2
+2022-10-21,CIGP,2400,La Libertad Avanza,19.6
+2022-10-21,CIGP,2400,Otros,11.5
 2022-10-28,PGD Consultores,2400,Juntos por el Cambio,40.2
 2022-10-28,PGD Consultores,2400,Frente de Todos,28.7
 2022-10-28,PGD Consultores,2400,La Libertad Avanza,20.7
@@ -705,21 +705,21 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-07-02,Giacobbe & Asociados,2500,Frente de Izquierda,1.75
 2023-07-02,Giacobbe & Asociados,2500,Consenso Federal,2.1
 2023-07-02,Giacobbe & Asociados,2500,Otros,1.3
-2023-07-05,Consultora Clivajes,1570,Juntos por el Cambio,36.5
-2023-07-05,Consultora Clivajes,1570,Frente de Todos,32.8
-2023-07-05,Consultora Clivajes,1570,La Libertad Avanza,19.8
-2023-07-05,Consultora Clivajes,1570,Frente de Izquierda,2.8
-2023-07-05,Consultora Clivajes,1570,Consenso Federal,3.7
-2023-07-05,Consultora Clivajes,1570,Otros,4.4
+2023-07-05,Clivajes Consultores,1570,Juntos por el Cambio,36.5
+2023-07-05,Clivajes Consultores,1570,Frente de Todos,32.8
+2023-07-05,Clivajes Consultores,1570,La Libertad Avanza,19.8
+2023-07-05,Clivajes Consultores,1570,Frente de Izquierda,2.8
+2023-07-05,Clivajes Consultores,1570,Consenso Federal,3.7
+2023-07-05,Clivajes Consultores,1570,Otros,4.4
 2023-07-06,Federico González & Asociados,2400,Juntos por el Cambio,37.5
 2023-07-06,Federico González & Asociados,2400,Frente de Todos,31.9
 2023-07-06,Federico González & Asociados,2400,La Libertad Avanza,19
 2023-07-06,Federico González & Asociados,2400,Frente de Izquierda,2.1
 2023-07-06,Federico González & Asociados,2400,Consenso Federal,3.8
 2023-07-06,Federico González & Asociados,2400,Otros,5.8
-2023-07-06,Zuban Cordoba & Asociados,1280,Juntos por el Cambio,33.6
-2023-07-06,Zuban Cordoba & Asociados,1280,Frente de Todos,30.7
-2023-07-06,Zuban Cordoba & Asociados,1280,La Libertad Avanza,27.7
-2023-07-06,Zuban Cordoba & Asociados,1280,Frente de Izquierda,2.6
-2023-07-06,Zuban Cordoba & Asociados,1280,Consenso Federal,4
-2023-07-06,Zuban Cordoba & Asociados,1280,Otros,1.5
+2023-07-06,Zuban Córdoba & Asociados,1280,Juntos por el Cambio,33.6
+2023-07-06,Zuban Córdoba & Asociados,1280,Frente de Todos,30.7
+2023-07-06,Zuban Córdoba & Asociados,1280,La Libertad Avanza,27.7
+2023-07-06,Zuban Córdoba & Asociados,1280,Frente de Izquierda,2.6
+2023-07-06,Zuban Córdoba & Asociados,1280,Consenso Federal,4
+2023-07-06,Zuban Córdoba & Asociados,1280,Otros,1.5
