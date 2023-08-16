@@ -28,12 +28,14 @@ main <- function() {
     
     return(parsed_date)
   }
-
+  
+  index_primarias <- which(str_detect(tablas[1][[1]]$Muestra, pattern = "Comienzo"))
 
   primera <- tablas[1] %>% as.data.frame() %>% 
-    slice(2:nrow(.)) %>% 
+    slice(index_primarias+1:nrow(.)) %>% 
     setNames(c("fecha", "encuestadora", "muestra", "fdt", "jxc",
               "lla", "fit", "cf", "otros", "blanco", "indecisos", "ventaja")) %>% 
+    select(1:12) %>% 
     mutate(fecha = sapply(fecha, extract_and_parse_date) %>% as.Date(origin = "1970-01-01"),
           encuestadora = str_remove(encuestadora, "\\[.*")) |> 
     group_by(fecha, encuestadora) |> 
@@ -43,7 +45,7 @@ main <- function() {
     slice(2:nrow(.)) %>% 
     setNames(c("fecha", "encuestadora", "muestra", "fdt", "jxc",
               "lla", "fit", "otros", "blanco", "indecisos", "ventaja")) %>% 
-    slice(-87)  %>% 
+    select(1:11) %>% 
     mutate(fecha = sapply(fecha, extract_and_parse_date) %>% as.Date(origin = "1970-01-01"),
           encuestadora = str_remove(encuestadora, "\\[.*")) |> 
     group_by(fecha, encuestadora) |> 

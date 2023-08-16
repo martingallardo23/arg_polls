@@ -726,8 +726,8 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-07-06,Zuban Córdoba & Asociados,1280,Juntos por el Cambio,33.6
 2023-07-06,Zuban Córdoba & Asociados,1280,Frente de Todos,30.7
 2023-07-06,Zuban Córdoba & Asociados,1280,La Libertad Avanza,27.7
-2023-07-06,Zuban Córdoba & Asociados,1280,Frente de Izquierda,2.6
-2023-07-06,Zuban Córdoba & Asociados,1280,Consenso Federal,4
+2023-07-06,Zuban Córdoba & Asociados,1280,Frente de Izquierda,4
+2023-07-06,Zuban Córdoba & Asociados,1280,Consenso Federal,2.6
 2023-07-06,Zuban Córdoba & Asociados,1280,Otros,1.5
 2023-07-07,IPD,1600,Juntos por el Cambio,39.6
 2023-07-07,IPD,1600,Frente de Todos,35.2
@@ -860,6 +860,12 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-08-02,Opina Argentina,1404,Frente de Izquierda,3.3
 2023-08-02,Opina Argentina,1404,Consenso Federal,4.3
 2023-08-02,Opina Argentina,1404,Otros,2.2
+2023-08-02,Opinaia,2000,Juntos por el Cambio,34.9
+2023-08-02,Opinaia,2000,Frente de Todos,24.4
+2023-08-02,Opinaia,2000,La Libertad Avanza,25.6
+2023-08-02,Opinaia,2000,Frente de Izquierda,4.7
+2023-08-02,Opinaia,2000,Consenso Federal,3.5
+2023-08-02,Opinaia,2000,Otros,7
 2023-08-03,Federico González & Asociados,2400,Juntos por el Cambio,37.6
 2023-08-03,Federico González & Asociados,2400,Frente de Todos,31.1
 2023-08-03,Federico González & Asociados,2400,La Libertad Avanza,20.2
