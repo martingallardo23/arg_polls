@@ -248,7 +248,7 @@ function handleMouseOut(event, d) {
 }
 
 function handleMouseMove(event, d) {
-    var mouseX = event.clientX - svgBounds.left - margin.left;
+    var mouseX = event.clientX - svgBounds.left - margin.left +5;
     var date = x.invert(mouseX);
 
     verticalLine.attr("x1", mouseX)

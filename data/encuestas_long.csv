@@ -854,12 +854,6 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-08-01,Opinión Pública Servicios y Mercados,1200,Frente de Izquierda,3
 2023-08-01,Opinión Pública Servicios y Mercados,1200,Consenso Federal,5.8
 2023-08-01,Opinión Pública Servicios y Mercados,1200,Otros,1.7
-2023-08-02,Opina Argentina,1404,Juntos por el Cambio,34.8
-2023-08-02,Opina Argentina,1404,Frente de Todos,33.7
-2023-08-02,Opina Argentina,1404,La Libertad Avanza,21.7
-2023-08-02,Opina Argentina,1404,Frente de Izquierda,3.3
-2023-08-02,Opina Argentina,1404,Consenso Federal,4.3
-2023-08-02,Opina Argentina,1404,Otros,2.2
 2023-08-02,Opinaia,2000,Juntos por el Cambio,34.9
 2023-08-02,Opinaia,2000,Frente de Todos,24.4
 2023-08-02,Opinaia,2000,La Libertad Avanza,25.6
@@ -878,31 +872,65 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-08-04,Atlas Intel,9517,Frente de Izquierda,4.7
 2023-08-04,Atlas Intel,9517,Consenso Federal,3.6
 2023-08-04,Atlas Intel,9517,Otros,3.1
+2023-08-13,Elecciones primarias,24625774,Juntos por el Cambio,29.6
+2023-08-13,Elecciones primarias,24625774,Frente de Todos,28.9
+2023-08-13,Elecciones primarias,24625774,La Libertad Avanza,31.6
+2023-08-13,Elecciones primarias,24625774,Frente de Izquierda,3.9
+2023-08-13,Elecciones primarias,24625774,Consenso Federal,2.8
+2023-08-13,Elecciones primarias,24625774,Otros,3.2
+2023-08-16,CB Consultora,4340,Juntos por el Cambio,27.7
+2023-08-16,CB Consultora,4340,Frente de Todos,30.8
+2023-08-16,CB Consultora,4340,La Libertad Avanza,35.4
+2023-08-16,CB Consultora,4340,Frente de Izquierda,4.2
+2023-08-16,CB Consultora,4340,Consenso Federal,2
 2023-08-17,OPSA,4623,Juntos por el Cambio,23.7
 2023-08-17,OPSA,4623,Frente de Todos,32.3
 2023-08-17,OPSA,4623,La Libertad Avanza,38.5
 2023-08-17,OPSA,4623,Frente de Izquierda,3.2
 2023-08-17,OPSA,4623,Consenso Federal,2.3
+2023-08-18,DC Consultores,2100,Juntos por el Cambio,30.2
+2023-08-18,DC Consultores,2100,Frente de Todos,28.2
+2023-08-18,DC Consultores,2100,La Libertad Avanza,41.6
 2023-08-21,Analogías,2523,Juntos por el Cambio,23.8
 2023-08-21,Analogías,2523,Frente de Todos,30.5
 2023-08-21,Analogías,2523,La Libertad Avanza,36.5
 2023-08-21,Analogías,2523,Frente de Izquierda,3.6
 2023-08-21,Analogías,2523,Consenso Federal,5.6
+2023-08-25,Opinaia,2000,Juntos por el Cambio,25.3
+2023-08-25,Opinaia,2000,Frente de Todos,27.5
+2023-08-25,Opinaia,2000,La Libertad Avanza,38.5
+2023-08-25,Opinaia,2000,Frente de Izquierda,5.5
+2023-08-25,Opinaia,2000,Consenso Federal,3.3
 2023-08-30,CEOP,1441,Juntos por el Cambio,26.8
 2023-08-30,CEOP,1441,Frente de Todos,33
 2023-08-30,CEOP,1441,La Libertad Avanza,36.9
 2023-08-30,CEOP,1441,Frente de Izquierda,2.4
 2023-08-30,CEOP,1441,Consenso Federal,0.9
+2023-08-31,Opinión Lab,1006,Juntos por el Cambio,22.5
+2023-08-31,Opinión Lab,1006,Frente de Todos,28.6
+2023-08-31,Opinión Lab,1006,La Libertad Avanza,39.2
+2023-08-31,Opinión Lab,1006,Frente de Izquierda,5.6
+2023-08-31,Opinión Lab,1006,Consenso Federal,4.2
 2023-09-03,Consultora Tendencias,25704,Juntos por el Cambio,24.8
 2023-09-03,Consultora Tendencias,25704,Frente de Todos,31.1
 2023-09-03,Consultora Tendencias,25704,La Libertad Avanza,36.2
 2023-09-03,Consultora Tendencias,25704,Frente de Izquierda,3.2
 2023-09-03,Consultora Tendencias,25704,Consenso Federal,4.8
+2023-09-04,Synopsis,2653,Juntos por el Cambio,26.7
+2023-09-04,Synopsis,2653,Frente de Todos,31.7
+2023-09-04,Synopsis,2653,La Libertad Avanza,37.3
+2023-09-04,Synopsis,2653,Frente de Izquierda,2.5
+2023-09-04,Synopsis,2653,Consenso Federal,1.9
 2023-09-05,Analogías,2398,Juntos por el Cambio,24.7
 2023-09-05,Analogías,2398,Frente de Todos,32.7
 2023-09-05,Analogías,2398,La Libertad Avanza,36.2
 2023-09-05,Analogías,2398,Frente de Izquierda,2.4
 2023-09-05,Analogías,2398,Consenso Federal,4
+2023-09-08,Federico González y Asociados,2400,Juntos por el Cambio,29.7
+2023-09-08,Federico González y Asociados,2400,Frente de Todos,29.4
+2023-09-08,Federico González y Asociados,2400,La Libertad Avanza,33.1
+2023-09-08,Federico González y Asociados,2400,Frente de Izquierda,4
+2023-09-08,Federico González y Asociados,2400,Consenso Federal,3.9
 2023-09-10,Opina Argentina,2359,Juntos por el Cambio,26.9
 2023-09-10,Opina Argentina,2359,Frente de Todos,31.2
 2023-09-10,Opina Argentina,2359,La Libertad Avanza,36.6
@@ -913,41 +941,86 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-09-14,CEOP,1335,La Libertad Avanza,35.6
 2023-09-14,CEOP,1335,Frente de Izquierda,3.1
 2023-09-14,CEOP,1335,Consenso Federal,1.7
+2023-09-14,Escenarios,1797,Juntos por el Cambio,20.4
+2023-09-14,Escenarios,1797,Frente de Todos,29.6
+2023-09-14,Escenarios,1797,La Libertad Avanza,42.8
+2023-09-14,Escenarios,1797,Frente de Izquierda,5.7
+2023-09-14,Escenarios,1797,Consenso Federal,1.4
+2023-09-18,Giacobbe & Asociados,2500,Juntos por el Cambio,29.4
+2023-09-18,Giacobbe & Asociados,2500,Frente de Todos,29
+2023-09-18,Giacobbe & Asociados,2500,La Libertad Avanza,35.8
+2023-09-18,Giacobbe & Asociados,2500,Frente de Izquierda,3.2
+2023-09-18,Giacobbe & Asociados,2500,Consenso Federal,2.6
 2023-09-20,CELAG,2509,Juntos por el Cambio,28.1
 2023-09-20,CELAG,2509,Frente de Todos,32.2
 2023-09-20,CELAG,2509,La Libertad Avanza,33.2
 2023-09-20,CELAG,2509,Frente de Izquierda,3.6
 2023-09-20,CELAG,2509,Consenso Federal,2.9
+2023-09-20,Opinaia,2000,Juntos por el Cambio,25.6
+2023-09-20,Opinaia,2000,Frente de Todos,28.9
+2023-09-20,Opinaia,2000,La Libertad Avanza,36.7
+2023-09-20,Opinaia,2000,Frente de Izquierda,5.6
+2023-09-20,Opinaia,2000,Consenso Federal,3.3
 2023-09-21,Proyección Consultores,2260,Juntos por el Cambio,26.3
 2023-09-21,Proyección Consultores,2260,Frente de Todos,31.7
 2023-09-21,Proyección Consultores,2260,La Libertad Avanza,36.7
 2023-09-21,Proyección Consultores,2260,Frente de Izquierda,2.8
 2023-09-21,Proyección Consultores,2260,Consenso Federal,2.5
+2023-09-22,Aresco,NA,Juntos por el Cambio,24.4
+2023-09-22,Aresco,NA,Frente de Todos,32
+2023-09-22,Aresco,NA,La Libertad Avanza,37.7
+2023-09-22,Aresco,NA,Frente de Izquierda,3
+2023-09-22,Aresco,NA,Consenso Federal,3
 2023-09-25,Atlas Intel,3778,Juntos por el Cambio,29.7
 2023-09-25,Atlas Intel,3778,Frente de Todos,32.9
 2023-09-25,Atlas Intel,3778,La Libertad Avanza,29.9
 2023-09-25,Atlas Intel,3778,Frente de Izquierda,5.2
 2023-09-25,Atlas Intel,3778,Consenso Federal,2.3
+2023-09-25,Circuitos Consultora,2188,Juntos por el Cambio,26.3
+2023-09-25,Circuitos Consultora,2188,Frente de Todos,33.1
+2023-09-25,Circuitos Consultora,2188,La Libertad Avanza,36.7
+2023-09-25,Circuitos Consultora,2188,Frente de Izquierda,2
+2023-09-25,Circuitos Consultora,2188,Consenso Federal,1.9
 2023-09-25,UdeSA,1000,Juntos por el Cambio,26.4
 2023-09-25,UdeSA,1000,Frente de Todos,29.8
 2023-09-25,UdeSA,1000,La Libertad Avanza,34.7
 2023-09-25,UdeSA,1000,Frente de Izquierda,6
 2023-09-25,UdeSA,1000,Consenso Federal,3
+2023-09-28,CB Consultora,4072,Juntos por el Cambio,26.3
+2023-09-28,CB Consultora,4072,Frente de Todos,32.1
+2023-09-28,CB Consultora,4072,La Libertad Avanza,35.8
+2023-09-28,CB Consultora,4072,Frente de Izquierda,3.4
+2023-09-28,CB Consultora,4072,Consenso Federal,2.3
 2023-09-29,Aresco,1200,Juntos por el Cambio,25.9
 2023-09-29,Aresco,1200,Frente de Todos,32.1
 2023-09-29,Aresco,1200,La Libertad Avanza,35
 2023-09-29,Aresco,1200,Frente de Izquierda,4.7
 2023-09-29,Aresco,1200,Consenso Federal,2.3
+2023-10-03,Reale Dalla Torre,2615,Juntos por el Cambio,23.8
+2023-10-03,Reale Dalla Torre,2615,Frente de Todos,27
+2023-10-03,Reale Dalla Torre,2615,La Libertad Avanza,39.6
+2023-10-03,Reale Dalla Torre,2615,Frente de Izquierda,5.5
+2023-10-03,Reale Dalla Torre,2615,Consenso Federal,4.2
 2023-10-04,Zuban Córdoba & Asociados,1400,Juntos por el Cambio,25.9
 2023-10-04,Zuban Córdoba & Asociados,1400,Frente de Todos,33.8
 2023-10-04,Zuban Córdoba & Asociados,1400,La Libertad Avanza,35.9
 2023-10-04,Zuban Córdoba & Asociados,1400,Frente de Izquierda,2.8
 2023-10-04,Zuban Córdoba & Asociados,1400,Consenso Federal,1.7
+2023-10-05,Fixer,2506,Juntos por el Cambio,26.9
+2023-10-05,Fixer,2506,Frente de Todos,27.6
+2023-10-05,Fixer,2506,La Libertad Avanza,36.3
+2023-10-05,Fixer,2506,Frente de Izquierda,5.8
+2023-10-05,Fixer,2506,Consenso Federal,3.3
 2023-10-07,Giacobbe & Asociados,2500,Juntos por el Cambio,28.4
 2023-10-07,Giacobbe & Asociados,2500,Frente de Todos,29.6
 2023-10-07,Giacobbe & Asociados,2500,La Libertad Avanza,34.2
 2023-10-07,Giacobbe & Asociados,2500,Frente de Izquierda,4.4
 2023-10-07,Giacobbe & Asociados,2500,Consenso Federal,3.4
+2023-10-08,CIGP,1500,Juntos por el Cambio,25.1
+2023-10-08,CIGP,1500,Frente de Todos,33.7
+2023-10-08,CIGP,1500,La Libertad Avanza,32.7
+2023-10-08,CIGP,1500,Frente de Izquierda,7
+2023-10-08,CIGP,1500,Consenso Federal,1.6
 2023-10-09,Proyección Consultores,2966,Juntos por el Cambio,24.2
 2023-10-09,Proyección Consultores,2966,Frente de Todos,32.3
 2023-10-09,Proyección Consultores,2966,La Libertad Avanza,37.1
@@ -958,16 +1031,31 @@ fecha,encuestadora,muestra,party,percentage_points
 2023-10-10,Atlas Intel,4248,La Libertad Avanza,26.1
 2023-10-10,Atlas Intel,4248,Frente de Izquierda,12.2
 2023-10-10,Atlas Intel,4248,Consenso Federal,4
+2023-10-10,DC Consultores,2700,Juntos por el Cambio,29.9
+2023-10-10,DC Consultores,2700,Frente de Todos,27.1
+2023-10-10,DC Consultores,2700,La Libertad Avanza,36.8
+2023-10-10,DC Consultores,2700,Frente de Izquierda,2.8
+2023-10-10,DC Consultores,2700,Consenso Federal,3.5
 2023-10-11,CB Consultora,4069,Juntos por el Cambio,24.2
 2023-10-11,CB Consultora,4069,Frente de Todos,32.3
 2023-10-11,CB Consultora,4069,La Libertad Avanza,33.1
 2023-10-11,CB Consultora,4069,Frente de Izquierda,6.7
 2023-10-11,CB Consultora,4069,Consenso Federal,3.8
-2023-10-11,Clivajes Consultores,1240,Juntos por el Cambio,27.6
-2023-10-11,Clivajes Consultores,1240,Frente de Todos,32.4
-2023-10-11,Clivajes Consultores,1240,La Libertad Avanza,34.1
-2023-10-11,Clivajes Consultores,1240,Frente de Izquierda,2.2
-2023-10-11,Clivajes Consultores,1240,Consenso Federal,3.7
+2023-10-11,Circuitos Consultora,2131,Juntos por el Cambio,25.6
+2023-10-11,Circuitos Consultora,2131,Frente de Todos,33.9
+2023-10-11,Circuitos Consultora,2131,La Libertad Avanza,35.8
+2023-10-11,Circuitos Consultora,2131,Frente de Izquierda,2.4
+2023-10-11,Circuitos Consultora,2131,Consenso Federal,2.2
+2023-10-11,Opinaia,2000,Juntos por el Cambio,23.7
+2023-10-11,Opinaia,2000,Frente de Todos,31.2
+2023-10-11,Opinaia,2000,La Libertad Avanza,34.4
+2023-10-11,Opinaia,2000,Frente de Izquierda,7.5
+2023-10-11,Opinaia,2000,Consenso Federal,3.2
+2023-10-12,Consultora Tendencias,17702,Juntos por el Cambio,25.2
+2023-10-12,Consultora Tendencias,17702,Frente de Todos,32.5
+2023-10-12,Consultora Tendencias,17702,La Libertad Avanza,33
+2023-10-12,Consultora Tendencias,17702,Frente de Izquierda,4.3
+2023-10-12,Consultora Tendencias,17702,Consenso Federal,5
 2023-10-13,Atlas Intel,5702,Juntos por el Cambio,25.7
 2023-10-13,Atlas Intel,5702,Frente de Todos,32.5
 2023-10-13,Atlas Intel,5702,La Libertad Avanza,27.9

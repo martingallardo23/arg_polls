@@ -32,7 +32,8 @@ main <- function() {
   index_primarias <- which(str_detect(tablas[1][[1]]$Muestra, pattern = "Comienzo"))
 
   primera <- tablas[1] %>% as.data.frame() %>% 
-    slice(index_primarias+1:nrow(.)) %>% 
+    slice(4:nrow(.)) %>% 
+    slice(-index_primarias) %>% 
     setNames(c("fecha", "encuestadora", "muestra", "fdt", "jxc",
               "lla", "fit", "cf", "otros", "blanco", "indecisos", "ventaja")) %>% 
     select(1:12) %>% 
